@@ -1,2 +1,5 @@
 # Recombination data used in paper
-data/recombination_data
+
+All files titled with clonalframe are the output from clonalframe
+
+concat_107.fasta, 
