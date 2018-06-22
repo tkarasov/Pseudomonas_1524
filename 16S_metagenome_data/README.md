@@ -1,4 +1,6 @@
 # 16S and Metagenome data
+This directory contains the v4 and metagenome data for the 192 plants (176 unique) for which strains, metagenomes and 16S data was accrued. The identity of the contents is described in brief below.
+
 data/16S_metagenome_data/OTU_table_metagenome_combined.txt, OTU table for v4 combined with columns regarding metagenome data
 data/16S_metagenome_data/v4_0.01.taxonomy, v4 taxonomy 99%
 data/16S_metagenome_data/v4_0.01.fasta, v4 fasta 99%
