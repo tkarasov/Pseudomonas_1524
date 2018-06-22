@@ -1,9 +1,6 @@
 #!/usr/bin/py
 #this file takes the output from clonalframe, removes the recomination events in the fasta files
 
-#commandline for clonalframe
-
-
 from Bio import SeqIO
 from Bio.Seq import Seq
 from Bio.Seq import MutableSeq
@@ -43,8 +40,6 @@ def remove_regions(recom_events, strain, mutable):
         strain_seq[start:end]="-"*(end-start)
     mutable[strain]=strain_seq
     return mutable
-
-
 
 #run clonalframe then next part extracts sequences from fasta which have not undergone recobmination. importation_status.txt has first and last events
 #cd /ebio/abt6_projects9/Pseudomonas_diversity/data/post_assembly_analysis/pan_genome/data/vis/clonalframe
