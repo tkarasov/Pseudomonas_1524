@@ -6,7 +6,7 @@ This directory contains scripts and data related to the Cell Host & Microbe Manu
 https://www.biorxiv.org/content/early/2018/01/15/241760
 
 ## Visualization of the pan-genome 
-![Alt text](~/Desktop/try.png?raw=true "Title")
+![panX](tkarasov@github.com/repository/panx.png?raw=true "Title")
 panx.weigelworld.org
 
 
