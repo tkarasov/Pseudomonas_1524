@@ -8,7 +8,6 @@ https://www.biorxiv.org/content/early/2018/01/15/241760
 ## Visualization of the pan-genome 
 ![panX](https://github.com/tkarasov/img/blob/master/panx.png?raw=true "Title")
 
-panx.weigelworld.org
 
 
 
