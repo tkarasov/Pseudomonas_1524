@@ -6,6 +6,9 @@ This directory contains scripts and data related to the Cell Host & Microbe Manu
 https://www.cell.com/cell-host-microbe/fulltext/S1931-3128(18)30323-8?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS1931312818303238%3Fshowall%3Dtrue
 
 ## Visualization of the pan-genome 
+The Visualization of the Pan-Genome can be found here in addition to access to gene comparisons and trees:
+http://panx.weigelworld.org/Pseudomonas
+
 ![panX](https://github.com/tkarasov/img/blob/master/panx.png?raw=true "Title")
 
 
