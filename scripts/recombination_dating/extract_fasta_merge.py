@@ -1,4 +1,4 @@
-#usr/bin/py
+
 from Bio import SeqIO
 import os
 import sys
