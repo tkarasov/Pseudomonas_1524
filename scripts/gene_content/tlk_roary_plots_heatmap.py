@@ -1,31 +1,13 @@
 #!/usr/bin/env python
-# Copyright (C) <2015> EMBL-European Bioinformatics Institute
-
-# This program is free software: you can redistribute it and/or
-# modify it under the terms of the GNU General Public License as
-# published by the Free Software Foundation, either version 3 of
-# the License, or (at your option) any later version.
-
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-# GNU General Public License for more details.
-
-# Neither the institution name nor the name roary_plots
-# can be used to endorse or promote products derived from
-# this software without prior written permission.
-# For written permission, please contact <marco@ebi.ac.uk>.
-
-# Products derived from this software may not be called roary_plots
-# nor may roary_plots appear in their names without prior written
-# permission of the developers. You should have received a copy
-# of the GNU General Public License along with this program.
-# If not, see <http://www.gnu.org/licenses/>.
+# Modified version of roary script that cannot be disseminated for non-academic usage:
+#original copyright (C) <2015> EMBL-European Bioinformatics Institute
+#cmd  python tlk_roary_plots.py RAxML_bestTree.1524_only_ML_all_sites_gap5_5_2018 raw_transpose.csv --format pdf
+#stored on cluster in /ebio/abt6_projects9/Pseudomonas_diversity/data/post_assembly_analysis/effector_identification/toxin_effectors
 
 #cmd  python tlk_roary_plots.py RAxML_bestTree.1524_only_ML_all_sites_gap5_5_2018 DC3000_print.csv --format pdf #this gives the DC3000 heatmap
 #python tlk_roary_plots_heatmap.py RAxML_bestTree.1524_only_ML_all_sites_gap5_5_2018 viridiflava_print.csv --format pdf #this gives the DC3000 heatmap
-__author__ = "Marco Galardini"
-__version__ = '0.1.0'
+
+
 
 def get_options():
     import argparse
