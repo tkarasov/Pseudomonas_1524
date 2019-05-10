@@ -1,8 +1,8 @@
 #!/bin/sh
 #
-#  Reserve 16 CPUs for this job
+#  Reserve 20 CPUs for this job
 #$ -pe parallel 20
-#  Request 140G of RAM
+#  
 #$ -l h_vmem=32G
 #
 #  The name shown in the qstat output and in the output file(s). The
@@ -35,13 +35,13 @@ alignment=/ebio/abt6_projects9/Pseudomonas_diversity/data/post_assembly_analysis
 
 
 #­f b draw bipartition information on a tree provided with ­t (typically the bestknownML tree) based on multiple trees (e.g., from a bootstrap) in a file  specified by ­z
-#/usr/bin/raxmlHPC-PTHREADS-SSE3  -T 20 -p 12345 -x 12345 -# 100  -s $alignment -n branches -c 25 -m GTRGAMMA -p 344312987 -f a
+# /usr/bin/raxmlHPC-PTHREADS-SSE3  -T 20 -p 12345 -x 12345 -# 100  -s $alignment -n branches -c 25 -m GTRGAMMA -p 344312987 -f a
 
 bootstrap=/ebio/abt6_projects9/Pseudomonas_diversity/data/post_assembly_analysis/pan_genome/data/phylogeny/RAxML_bootstrap.branches
 original=/ebio/abt6_projects9/Pseudomonas_diversity/data/post_assembly_analysis/pan_genome/data/vis/strain_tree.nwk
 
 
-#now we can analyze the quality of the partition of from the boostraps above
+#now we can analyze the quality of the partition from the boostraps above
 /usr/bin/raxmlHPC -f b -t $original -z $boostrap -m GTRGAMMA -n test
 #/usr/bin/raxmlHPC-PTHREADS-SSE3  -m GTRGAMMA  -n test  -z /ebio/abt6_projects9/Pseudomonas_diversity/data/post_assembly_analysis/pan_genome/data/phylogeny/RAxML_bootstrap.branches  -f b -t /ebio/abt6_projects9/Pseudomonas_diversity/data/post_assembly_analysis/pan_genome/data/vis/strain_tree.nwk
 /usr/bin/raxmlHPC-PTHREADS-SSE3  -m GTRGAMMA  -n raxml_tree_bootstrapped.tree  -z /ebio/abt6_projects9/Pseudomonas_diversity/data/post_assembly_analysis/pan_genome/data/phylogeny/RAxML_bootstrap.branches  -f b -t /ebio/abt6_projects9/Pseudomonas_diversity/data/post_assembly_analysis/pan_genome/data/phylogeny/RAxML_bestTree.branches
