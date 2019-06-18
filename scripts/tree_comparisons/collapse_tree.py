@@ -13,10 +13,12 @@ ts = TreeStyle()
 ts.show_leaf_name = True
 ts.show_branch_length = False
 ts.show_branch_support = False
-#need the Tree and sys packages
+
 #script stole from https://www.biostars.org/p/97409/
+
 def mean(array):
     return sum(array)/float(len(array))
+
 
 def cache_distances(tree):
     ''' precalculate distances of all nodes to the root''' 
@@ -24,6 +26,7 @@ def cache_distances(tree):
     for node in tree.iter_descendants('preorder'):
         node2rootdist[node] = node.dist + node2rootdist[node.up]
     return node2rootdist
+
 
 def collapse(tree, min_dist):
     # cache the tip content of each node to reduce the number of times the tree is traversed
@@ -65,12 +68,14 @@ def collapse_for_loop(node2tips, root_distance, tree, min_dist):
 def mean(array):
     return sum(array)/float(len(array))
 
+
 def cache_distances(tree):
     ''' precalculate distances of all nodes to the root''' 
     node2rootdist = {tree:0}
     for node in tree.iter_descendants('preorder'):
         node2rootdist[node] = node.dist + node2rootdist[node.up]
     return node2rootdist
+
 
 def collapse_rename(tree, min_dist):
     #does the same thing as collapse but renames nodes with species identification
