@@ -40,8 +40,6 @@ def collapse(tree, min_dist):
     print "Was "+ str(num_tips)+ ", is now "+str(num_tips_iteration_new)+ " tips"
 
              
-
-
 def collapse_for_loop(node2tips, root_distance, tree, min_dist):
     for node in tree.get_descendants('preorder'):
         if not node.is_leaf():
@@ -60,18 +58,7 @@ def collapse_for_loop(node2tips, root_distance, tree, min_dist):
                     node.add_child(name=new_tip, dist=new_tip_dist)
                     #node.is_leaf()=True
                     #node.img_style['draw_descendants'] = Fals
-                        
-                # do whatever, ete support node annotation, deletion, labeling, etc.
-                # rename
-                #node.name =  '_'.join([tip.name for tip in node2tips[node]])
-                # label
-                
 
-                # set drawing attribute so they look collapsed when displayed with tree.show()
-                
-                #for n in tree.search_nodes(collapsed=True):
-                #    for ch in n.get_children():
-                #        ch.detach()
     return tree
 
 
@@ -151,7 +138,6 @@ def calc_core_gene_alignment_length(core_gene_folder, SNP_alignment):
     return float(SNP_length)/sum(tot)
                     
     
-
 def pull_single_node(tree):
 #when I need to simplify the tree to pull 16s sequences for just one sequence per node. Note that I exclude the genomes not sequenced here.
     tree=t #t is the collapsed tree
@@ -204,6 +190,7 @@ def pull_single_node(tree):
                 is_mine=["here"]
             node.name=(node.name)
 
+            
     my_node=new_tree.get_common_ancestor(["plate23.A5.annotation","NZ_AP014637","plate2.C11.annotation"])
     Psyringae_leaves=[rec.name for rec in my_node.get_leaves() if 'plate' in rec.name]
     P_other_leaves=[rec.name for rec in new_tree.get_leaves() if rec.name not in Psyringae_leaves]
@@ -305,8 +292,6 @@ def output_strain_assignment(t):
     t.write(format=1, outfile=output)
     t.render(output+".pdf", tree_style=ts)
     
-
-    
 #rename nodes --not needed unless putting species on
 #first read in species identification tree
 #spec="/Users/tkarasov/Dropbox/germany_pathogen_collections/data_files_rmarkdown/run_0034_species_assignment.txt"
@@ -319,6 +304,4 @@ def output_strain_assignment(t):
 #collapse_rename(t, min_dist)
 #t.show()
 
-
-            
 '''
